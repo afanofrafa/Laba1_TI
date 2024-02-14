@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->move((screenWidth - formWidth) / 2, (screenHeight - formHeight) / 2);
 
     ui->radioButton_Stolb_method->setChecked(true);
-    ui->radioButton_Shifr_Stolb->setChecked(true);
+    ui->radioButton_Shifr->setChecked(true);
 }
 
 MainWindow::~MainWindow()
@@ -308,7 +308,7 @@ void MainWindow::on_pushButton_Cypher_clicked()
         QString key = ui->textEdit_Key->toPlainText();
         QString encryption = "";
         if (Perform_Method(text_len, key_len, text, key, &encryption, true, ui->radioButton_Stolb_method->isChecked())) {
-            if (ui->radioButton_Shifr_Stolb->isChecked())
+            if (ui->radioButton_Shifr->isChecked())
                 ui->textEdit_Cypher->setText(encryption);
             else {
                 FullText(encryption, &text, ui->radioButton_Stolb_method->isChecked());
@@ -337,7 +337,7 @@ void MainWindow::on_pushButton_Cypher_f_clicked()
 
     if (key_len != 0 && text_len != 0) {
         if (Perform_Method(text_len, key_len, text_f, key_f, &encryption_f, true, ui->radioButton_Stolb_method->isChecked())) {
-            if (!ui->radioButton_All_Stolb->isChecked())
+            if (!ui->radioButton_All_Symbols->isChecked())
                 fileWrite(encryption_f);
             else {
                 FullText(encryption_f, &text_f, ui->radioButton_Stolb_method->isChecked());
