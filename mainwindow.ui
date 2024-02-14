@@ -273,7 +273,7 @@ QPushButton:pressed {
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QRadioButton" name="radioButton_Shifr_Stolb">
+      <widget class="QRadioButton" name="radioButton_Shifr">
        <property name="styleSheet">
         <string notr="true">font: 11pt &quot;Segoe UI&quot;;</string>
        </property>
@@ -283,7 +283,7 @@ QPushButton:pressed {
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioButton_All_Stolb">
+      <widget class="QRadioButton" name="radioButton_All_Symbols">
        <property name="styleSheet">
         <string notr="true">font: 11pt &quot;Segoe UI&quot;;</string>
        </property>
